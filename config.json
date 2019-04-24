@@ -1,0 +1,60 @@
+{
+  "LUBM": {
+    "SPARQL_PARAMS": {
+      "ONTOLOGY_ENDPOINT": "http://localhost:7200/repositories/",
+      "ONTOLOGY_REPOSITORY": "lubm",
+      "ONTOLOGY_ENDPOINT_TYPE": "GRAPHDB",
+      "PROPERTIES_QUERY": "sparql/properties_uris.sparql",
+      "SUB_PROPERTIES_QUERY": "sparql/sub_properties.sparql",
+      "CLASSES_QUERY": "sparql/lubm_classes.sparql",
+      "QUERY_LIMIT": 1000
+    },
+    "DATA": {
+      "INPUT_GRAPHS_FOLDER": "../data/lubm1_intact/graphs_with_descriptions/",
+      "INFERENCE_GRAPHS_FOLDER": "../data/lubm1_intact/jena_inference_with_descriptions/",
+      "RDF_FORMAT": "nt"
+    },
+    "ENCODING_PARAMS": {
+      "ENCODING_DIRECTORY": "../data/lubm1_intact/encoding/",
+      "PROPERTIES_DICT_FILE": "lubm_properties.pz",
+      "CLASSES_DICT_FILE": "lubm_classes.pz",
+      "PROPERTIES_GROUPS_FILE": "lubm_properties_groups.pz",
+      "DATASET_ENCODING_FILE": "lubm_dataset_encoding.pz",
+      "GRAPH_WORDS_ENCODER": "lubm_graph_words_encoder.pz",
+      "INPUT_GRAPH_WORDS_CATALOGUE_FILE": "lubm_input_graph_words_catalogue.pz",
+      "INFERENCE_GRAPH_WORDS_CATALOGUE_FILE": "lubm_inference_graph_words_catalogue.pz",
+      "EMBEDDING_MATRIX_CATALOGUE_FILE": "lubm_embedding_matrix_catalogue.pz",
+      "MAXIMUM_MATRIX_SIZE": 800,
+      "HOPE_EMBEDDING_SIZE": 4
+    },
+    "TRAINING": {
+      "LOGGING_FOLDER": "../data/lubm1_intact/training/log/",
+      "MODEL_FOLDER": "../data/lubm1_intact/training/model/",
+      "MODEL_ARCHITECTURE": "lubm_nn.json",
+      "TRAINING_SET_PERCENT": 0.6,
+      "VALIDATION_SET_PERCENT": 0.2,
+      "EPOCHS": 2,
+      "BATCH_SIZE": 128
+    }
+  },
+  "DBPEDIA": {
+    "SPARQL_PARAMS": {
+      "ONTOLOGY_ENDPOINT": "http://localhost:7200/repositories/",
+      "ONTOLOGY_REPOSITORY": "DBpedia",
+      "ONTOLOGY_ENDPOINT_TYPE": "GRAPHDB",
+      "PROPERTIES_QUERY": "sparql/properties_uris.sparql",
+      "CLASSES_QUERY": "sparql/dbpedia_classes.sparql",
+      "DATA_ENDPOINT": "https://dbpedia.org/sparql",
+      "DATA_ENDPOINT_TYPE": "VIRTUOSO",
+      "URIS_OF_CLASS_QUERY": "sparql/dbpedia_uris_of_class.sparql",
+      "SUB_PROPERTIES_QUERY": "sparql/sub_properties.sparql",
+      "QUERY_LIMIT": 1000
+    },
+    "ENCODING_PARAMS": {
+      "ENCODING_DIRECTORY": "../data/dbpedia_scientists/encoding/",
+      "PROPERTIES_DICT_FILE": "dbpedia_properties.pz",
+      "CLASSES_DICT_FILE": "dbpedia_classes.pz",
+      "PROPERTIES_GROUPS_FILE": "dbpedia_properties_groups.pz"
+    }
+  }
+}
