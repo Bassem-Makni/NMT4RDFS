@@ -29,6 +29,7 @@ Install requirements:
   2. Use the pre-computed LUBM global resources from data/lubm1_intact/global_resources/: 
   
      ```
+        mkdir -p  data/lubm1_intact/encoding/
         cp data/lubm1_intact/global_resources/* data/lubm1_intact/encoding
         ```
   
