@@ -1,0 +1,6 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?property1 ?property2 where
+{
+  ?property1 rdfs:subPropertyOf ?property2
+  filter(?property1 != ?property2)
+}
