@@ -54,12 +54,9 @@ python infer_lubm.py --input_graph=../data/lubm1_intact/graphs_with_descriptions
 
 You can specify a different model using ```--model_path ```
 
-## Generating graph words and training for the Scientists dataset
+## [Future updates]
+- [ ] Instructions for generating graph words and training for the Scientists dataset
+- [ ] Instructions to customize config.json for your dataset
 
-[TODO]
-
-## Using NMT4RDFS with your custom dataset
-
-[TODO]
 
 
