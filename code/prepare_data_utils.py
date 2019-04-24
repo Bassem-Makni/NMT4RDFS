@@ -162,6 +162,7 @@ def get_sparql_results(query_template, variables, endpoint, repository, endpoint
         logging.error(
             "SPARQL query error. Please make sure the ontology is loaded in repository %s at %s or change config",
             repository, endpoint)
+        exit()
 
 
 def sparqlQuery(query, baseURL, format="application/json"):
