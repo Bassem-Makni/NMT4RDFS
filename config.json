@@ -33,7 +33,7 @@
       "MODEL_ARCHITECTURE": "lubm_nn.json",
       "TRAINING_SET_PERCENT": 0.6,
       "VALIDATION_SET_PERCENT": 0.2,
-      "EPOCHS": 2,
+      "EPOCHS": 200,
       "BATCH_SIZE": 128
     }
   },
