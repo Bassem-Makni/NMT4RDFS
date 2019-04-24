@@ -77,8 +77,9 @@ def main():
     rdf_format = args.format
     if not input_graph_file:
         logging.error("Please specify an input graph path")
+        parser.usage()
         exit()
-        
+
     if not model_path:
         model_path = get_most_recent_model_path(MODEL_FOLDER)
 
