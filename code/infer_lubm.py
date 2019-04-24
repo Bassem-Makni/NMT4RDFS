@@ -1,15 +1,11 @@
 import configparser
 import json
 import logging
-import os
 from datetime import datetime
 
 import numpy as np
-from keras.callbacks import TensorBoard, ModelCheckpoint
 from keras.models import model_from_json
 from utils import deserialize
-from train_lubm import create_graph_words_translation_model
-from graph_words_utils import encode_input_graph
 import glob
 import os
 import codecs
@@ -79,8 +75,13 @@ def main():
     input_graph_file = args.input_graph
     model_path = args.model_path
     rdf_format = args.format
+    if not input_graph_file:
+        logging.error("Please specify an input graph path")
+        exit()
+        
     if not model_path:
         model_path = get_most_recent_model_path(MODEL_FOLDER)
+
     logging.info("Input graph file: %s", input_graph_file)
 
 
